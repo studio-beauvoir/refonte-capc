@@ -107,3 +107,11 @@ ______________________________________________________________*/
 .image-3{
     border-radius: 15px;
 }
+
+.blue-title{
+    color: var(--s1);
+}
+
+.gray-font{
+    color: var(--p2);
+}
