@@ -56,6 +56,7 @@ a {
     height: 68px;
     align-items: center;
     justify-content: space-around;
+    border-bottom: 2px solid var(--s1) ;
 }
 html[data-theme="dark"] .header, html[data-theme="dark"] .header a {
     color: var(--p1);
