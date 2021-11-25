@@ -1,0 +1,37 @@
+@import url(./var.css);
+@import url(./master.css);
+
+/* ______________________________________________________________
+
+                            GENERAL
+______________________________________________________________*/
+
+html, body{
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    margin: 0;
+}
+p{
+    margin:0;
+    font-weight: 400;
+}
+h2{
+    padding-right: 2.5rem;
+}
+h4{
+    padding-bottom: 1.25rem;
+}
+p .label{
+    font-weight: 300;
+}
+
+.section{
+    padding: 3.125rem 9.375rem 3.125rem 9.375rem;
+}
+
+/* ______________________________________________________________
+
+                        SPECIFIQUES
+______________________________________________________________*/
