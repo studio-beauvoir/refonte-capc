@@ -157,7 +157,7 @@ ______________________________________________________________*/
     margin-top: 11rem;
 }
 
-.image > .bouton{
+.image > .rae_bouton{
     width: 31rem;
     height: 3rem;
     border-radius: 15px;
@@ -167,6 +167,19 @@ ______________________________________________________________*/
     justify-content: center;
     align-items: center;
     margin-top: 7.5rem;
+}
+
+.rae_bouton > a{
+    color:var(--s1);
+    text-decoration: none;
+}
+
+.rae_bouton > a:visited{
+    color:var(--s2);
+}
+
+.rae_bouton > svg{
+    margin-left: 1rem;
 }
 
 .bio{
@@ -194,9 +207,19 @@ ______________________________________________________________*/
                            SECTION INFO-PATRICK
 ______________________________________________________________*/
 
+.ip_top_page{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: var(--b1);
+}
+
+.nothing{
+    width: 420px;
+}
+
 .ip_titre{
     padding-top: 6rem;
-    padding-left: 9rem;
+    margin-left: -2rem;
     padding-bottom: 3rem;
     color: var(--s1);
     background-color: var(--b1);
@@ -236,6 +259,20 @@ ______________________________________________________________*/
     border-radius: 10px;
 }
 
+.ip_bouton > a{
+    color:var(--p2);
+    text-decoration: none;;
+}
+
+.ip_bouton > a:visited{
+    color:var(--p2);
+}
+
+.ip_bouton > svg{
+    margin-left: 1rem;
+    color:var(--p2);
+}
+
 .ip_plan_acces > img{
     border-radius: 30px;
     margin-bottom: 1rem;
@@ -245,5 +282,3 @@ ______________________________________________________________*/
 .ip_partie_gauche{
     margin-bottom: 8rem;
 }
-
-
