@@ -46,6 +46,7 @@ a {
 }
 
 .header {
+    position: sticky;
     width: 100vw;
     color: var(--s1);
     background: var(--b2);
