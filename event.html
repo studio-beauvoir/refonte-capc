@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page Event</title>
+        
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/evenement-1.css">
+
+        <script src="/js/theme.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-wrapper">
+                <nav class="header-nav">
+                    <div class="header-logo"></div>
+                    <ul class="header-nav-links">
+                        <li class="header-nav-link with-submenu" data-fn-hover>
+                            <span class="header-nav-link-title">
+                                Programme
+                                <svg data-fn-onhover="hidden" width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM7.50003 4C7.77617 4 8.00003 4.22386 8.00003 4.5V7H10.5C10.7762 7 11 7.22386 11 7.5C11 7.77614 10.7762 8 10.5 8H8.00003V10.5C8.00003 10.7761 7.77617 11 7.50003 11C7.22389 11 7.00003 10.7761 7.00003 10.5V8H4.50003C4.22389 8 4.00003 7.77614 4.00003 7.5C4.00003 7.22386 4.22389 7 4.50003 7H7.00003V4.5C7.00003 4.22386 7.22389 4 7.50003 4Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                <svg data-fn-onhover="visible" width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM1.82707 7.49972C1.82707 4.36671 4.36689 1.82689 7.49991 1.82689C10.6329 1.82689 13.1727 4.36671 13.1727 7.49972C13.1727 10.6327 10.6329 13.1726 7.49991 13.1726C4.36689 13.1726 1.82707 10.6327 1.82707 7.49972ZM4.50003 7C4.22389 7 4.00003 7.22386 4.00003 7.5C4.00003 7.77614 4.22389 8 4.50003 8H10.5C10.7762 8 11 7.77614 11 7.5C11 7.22386 10.7762 7 10.5 7H4.50003Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            </span>
+                            <ul class="header-nav-link-submenu">
+                                <li><a class="header-nav-sublink" href="#">Expositions</a></li>
+                                <li><a class="header-nav-sublink" href="#">Visites</a></li>
+                                <li><a class="header-nav-sublink" href="#">Rencontres</a></li>
+                                <li><a class="header-nav-sublink" href="#">Conférences</a></li>
+                                <li><a class="header-nav-sublink" href="#">Jeune public</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-nav-link">
+                            <a class="header-nav-link-title" href="#">Actualités</a>
+                        </li>
+                        <li class="header-nav-link">
+                            <a class="header-nav-link-title" href="#">Musée</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="header-actions">
+                    <li class="header-action theme">
+                        <svg id="light-theme-btn" class="hidden-dark-mode" width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0C7.77614 0 8 0.223858 8 0.5V2.5C8 2.77614 7.77614 3 7.5 3C7.22386 3 7 2.77614 7 2.5V0.5C7 0.223858 7.22386 0 7.5 0ZM2.1967 2.1967C2.39196 2.00144 2.70854 2.00144 2.90381 2.1967L4.31802 3.61091C4.51328 3.80617 4.51328 4.12276 4.31802 4.31802C4.12276 4.51328 3.80617 4.51328 3.61091 4.31802L2.1967 2.90381C2.00144 2.70854 2.00144 2.39196 2.1967 2.1967ZM0.5 7C0.223858 7 0 7.22386 0 7.5C0 7.77614 0.223858 8 0.5 8H2.5C2.77614 8 3 7.77614 3 7.5C3 7.22386 2.77614 7 2.5 7H0.5ZM2.1967 12.8033C2.00144 12.608 2.00144 12.2915 2.1967 12.0962L3.61091 10.682C3.80617 10.4867 4.12276 10.4867 4.31802 10.682C4.51328 10.8772 4.51328 11.1938 4.31802 11.3891L2.90381 12.8033C2.70854 12.9986 2.39196 12.9986 2.1967 12.8033ZM12.5 7C12.2239 7 12 7.22386 12 7.5C12 7.77614 12.2239 8 12.5 8H14.5C14.7761 8 15 7.77614 15 7.5C15 7.22386 14.7761 7 14.5 7H12.5ZM10.682 4.31802C10.4867 4.12276 10.4867 3.80617 10.682 3.61091L12.0962 2.1967C12.2915 2.00144 12.608 2.00144 12.8033 2.1967C12.9986 2.39196 12.9986 2.70854 12.8033 2.90381L11.3891 4.31802C11.1938 4.51328 10.8772 4.51328 10.682 4.31802ZM8 12.5C8 12.2239 7.77614 12 7.5 12C7.22386 12 7 12.2239 7 12.5V14.5C7 14.7761 7.22386 15 7.5 15C7.77614 15 8 14.7761 8 14.5V12.5ZM10.682 10.682C10.8772 10.4867 11.1938 10.4867 11.3891 10.682L12.8033 12.0962C12.9986 12.2915 12.9986 12.608 12.8033 12.8033C12.608 12.9986 12.2915 12.9986 12.0962 12.8033L10.682 11.3891C10.4867 11.1938 10.4867 10.8772 10.682 10.682ZM5.5 7.5C5.5 6.39543 6.39543 5.5 7.5 5.5C8.60457 5.5 9.5 6.39543 9.5 7.5C9.5 8.60457 8.60457 9.5 7.5 9.5C6.39543 9.5 5.5 8.60457 5.5 7.5ZM7.5 4.5C5.84315 4.5 4.5 5.84315 4.5 7.5C4.5 9.15685 5.84315 10.5 7.5 10.5C9.15685 10.5 10.5 9.15685 10.5 7.5C10.5 5.84315 9.15685 4.5 7.5 4.5Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        <svg id="dark-theme-btn" class="hidden-light-mode" width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.89998 0.499976C2.89998 0.279062 2.72089 0.0999756 2.49998 0.0999756C2.27906 0.0999756 2.09998 0.279062 2.09998 0.499976V1.09998H1.49998C1.27906 1.09998 1.09998 1.27906 1.09998 1.49998C1.09998 1.72089 1.27906 1.89998 1.49998 1.89998H2.09998V2.49998C2.09998 2.72089 2.27906 2.89998 2.49998 2.89998C2.72089 2.89998 2.89998 2.72089 2.89998 2.49998V1.89998H3.49998C3.72089 1.89998 3.89998 1.72089 3.89998 1.49998C3.89998 1.27906 3.72089 1.09998 3.49998 1.09998H2.89998V0.499976ZM5.89998 3.49998C5.89998 3.27906 5.72089 3.09998 5.49998 3.09998C5.27906 3.09998 5.09998 3.27906 5.09998 3.49998V4.09998H4.49998C4.27906 4.09998 4.09998 4.27906 4.09998 4.49998C4.09998 4.72089 4.27906 4.89998 4.49998 4.89998H5.09998V5.49998C5.09998 5.72089 5.27906 5.89998 5.49998 5.89998C5.72089 5.89998 5.89998 5.72089 5.89998 5.49998V4.89998H6.49998C6.72089 4.89998 6.89998 4.72089 6.89998 4.49998C6.89998 4.27906 6.72089 4.09998 6.49998 4.09998H5.89998V3.49998ZM1.89998 6.49998C1.89998 6.27906 1.72089 6.09998 1.49998 6.09998C1.27906 6.09998 1.09998 6.27906 1.09998 6.49998V7.09998H0.499976C0.279062 7.09998 0.0999756 7.27906 0.0999756 7.49998C0.0999756 7.72089 0.279062 7.89998 0.499976 7.89998H1.09998V8.49998C1.09998 8.72089 1.27906 8.89997 1.49998 8.89997C1.72089 8.89997 1.89998 8.72089 1.89998 8.49998V7.89998H2.49998C2.72089 7.89998 2.89998 7.72089 2.89998 7.49998C2.89998 7.27906 2.72089 7.09998 2.49998 7.09998H1.89998V6.49998ZM8.54406 0.98184L8.24618 0.941586C8.03275 0.917676 7.90692 1.1655 8.02936 1.34194C8.17013 1.54479 8.29981 1.75592 8.41754 1.97445C8.91878 2.90485 9.20322 3.96932 9.20322 5.10022C9.20322 8.37201 6.82247 11.0878 3.69887 11.6097C3.45736 11.65 3.20988 11.6772 2.96008 11.6906C2.74563 11.702 2.62729 11.9535 2.77721 12.1072C2.84551 12.1773 2.91535 12.2458 2.98667 12.3128L3.05883 12.3795L3.31883 12.6045L3.50684 12.7532L3.62796 12.8433L3.81491 12.9742L3.99079 13.089C4.11175 13.1651 4.23536 13.2375 4.36157 13.3059L4.62496 13.4412L4.88553 13.5607L5.18837 13.6828L5.43169 13.7686C5.56564 13.8128 5.70149 13.8529 5.83857 13.8885C5.94262 13.9155 6.04767 13.9401 6.15405 13.9622C6.27993 13.9883 6.40713 14.0109 6.53544 14.0298L6.85241 14.0685L7.11934 14.0892C7.24637 14.0965 7.37436 14.1002 7.50322 14.1002C11.1483 14.1002 14.1032 11.1453 14.1032 7.50023C14.1032 7.25044 14.0893 7.00389 14.0623 6.76131L14.0255 6.48407C13.991 6.26083 13.9453 6.04129 13.8891 5.82642C13.8213 5.56709 13.7382 5.31398 13.6409 5.06881L13.5279 4.80132L13.4507 4.63542L13.3766 4.48666C13.2178 4.17773 13.0353 3.88295 12.8312 3.60423L12.6782 3.40352L12.4793 3.16432L12.3157 2.98361L12.1961 2.85951L12.0355 2.70246L11.8134 2.50184L11.4925 2.24191L11.2483 2.06498L10.9562 1.87446L10.6346 1.68894L10.3073 1.52378L10.1938 1.47176L9.95488 1.3706L9.67791 1.2669L9.42566 1.1846L9.10075 1.09489L8.83599 1.03486L8.54406 0.98184ZM10.4032 5.30023C10.4032 4.27588 10.2002 3.29829 9.83244 2.40604C11.7623 3.28995 13.1032 5.23862 13.1032 7.50023C13.1032 10.593 10.596 13.1002 7.50322 13.1002C6.63646 13.1002 5.81597 12.9036 5.08355 12.5522C6.5419 12.0941 7.81081 11.2082 8.74322 10.0416C8.87963 10.2284 9.10028 10.3497 9.34928 10.3497C9.76349 10.3497 10.0993 10.0139 10.0993 9.59971C10.0993 9.24256 9.84965 8.94373 9.51535 8.86816C9.57741 8.75165 9.63653 8.63334 9.6926 8.51332C9.88358 8.63163 10.1088 8.69993 10.35 8.69993C11.0403 8.69993 11.6 8.14028 11.6 7.44993C11.6 6.75976 11.0406 6.20024 10.3505 6.19993C10.3853 5.90487 10.4032 5.60464 10.4032 5.30023Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </li>
+                    <li class="header-action search">
+                        <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </li>
+                    <li class="header-action langs">
+                        <ul class>
+                            <li class="header-action-langs-item lang-fr">FR</li>
+                            <li class="header-action-langs-item lang-en">ENG</li>
+                            <li class="header-action-langs-item lang-sp">SP</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="section hero">
+            <div class="little-title">
+                <h2>Exposition</h2>
+                <h4 class="t1">Visite LSF</h4>
+            </div>
+            <div class="main-title">
+                <h1>Sylvie TENDRON</h1>
+                <h5>04.12.2021</h5>
+            </div>
+        </section > 
+        <section class="section section-1">
+            <h2 class="title-section-1">Le Tour du jour en quatre-vingts mondes</h2>
+            <div class="allpart">
+                <div class="part part-1">
+                    <div class="rapport">
+                        <h4>Rapport Intercontinental</h4>
+                        <p>Empruntant son titre à un recueil de textes de Julio Cortázar, l’exposition Le Tour du jour en quatre-vingts mondes revisite les œuvres majeures de la collection du Capc sous l’angle de systèmes de représentation renouvelés du monde. À l’instar d’autres musées européens, le Capc a construit et développé sa collection sur un socle majoritairement masculin et anglo-européen, alors même que, depuis le XVIIe siècle, l’histoire commerciale et culturelle de Bordeaux s’écrit à travers son rapport avec l’Afrique, l’Asie et les Amériques.</p>
+                    </div>
+                    <div class="tarif"><h5>Tarif : Prix du billet d’entrée majoré de 1€</h5></div>
+                </div>
+                <div class="part part-2">
+                    <div class="rapport">
+                        <h4>Flux culturel</h4>
+                        <p>Le mouvement de décentrement culturel sans précédent auquel nous assistons depuis plusieurs décennies, mais dont nous ne mesurons que depuis peu le séisme culturel, politique et sociologique qu’il génère, impose une réévaluation des collections publiques qui prenne en compte les processus complexes à l’œuvre dans la mondialisation.</p>
+                    </div>
+                </div>
+                <div class="part part-3">
+                    <img class="image-content" src="/assets/img/281.jpg" alt="groupe de chat mignon dans un panier">
+                    <div class="rapport">
+                        <h4>Poétisation</h4>
+                        <p>L’exposition Le Tour du jour en quatre-vingts mondes génère des dialogues entre artistes d’origines géographiques, de genres et de générations diverses et postule que de nouveaux récits de l’art sont possibles et souhaitables. Si elle se nourrit d’expositions récentes autour de ces questions, à l’instar de Modernités plurielles au Centre Pompidou en 2015 ou Intense Proximité au Palais de Tokyo en 2012, elle s’en démarque dans la mesure où, comme son titre le suggère, elle assume pleinement sa dérive poétique.</p>
+                    </div>
+                </div>
+                <div class="part part-4">
+                    <div class="rapport">
+                    <h4>Affiliation</h4>
+                    <p>Pour opérer ce dialogue, le Capc s’est associé au Centre national des arts plastiques, par le biais d’un dépôt conséquent d’œuvres d’artistes originaires de régions extra-européennes, mais dont la démarche singulière déjoue tout déterminisme qui consisterait à réduire leur identité à un genre, une génération ou un contexte géographique déterminé. Ce nouveau corpus vient s’articuler avec des œuvres de deux décennies charnières dans l’histoire des acquisitions du Capc – les années 1980 et 1990 – pendant lesquelles s’est construite la colonne vertébrale de la collection du musée.</p>
+                    </div>
+                </div>
+            </div>
+        </section >
+        <section class="section section-2">
+            <div class="carre-bleu">
+                <div class="texte">
+                    <div class="bio">
+                        <h2>Biographie</h2>
+                    </div>
+                    <div class="auteur">
+                        <h4>Sylvanie Tendron - Vidéographe</h4>
+                    </div>
+                    <div class="competences">
+                        <p>Artiste vidéaste-performeuse, médiatrice culturelle en Langue des Signes Française et Trad'adaptatrice en Langue des Signes pour des projets artistiques et culturelles.</p>
+                    </div>
+                    <div class="resume">
+                        <p>Sylvanie Tendron explore les comportements liés au langage et à la communication. Pour ce faire, elle puise dans son expérience quotidienne et évoque, avec humour et dérision, l’absurdité, les entraves et les malentendus suscités par la confrontation et la rencontre de la différence.</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHg5Yo_k3bp2g/profile-displayphoto-shrink_400_400/0/1617777661743?e=1643241600&v=beta&t=74FkDi6OwM6jN-Yjj37yuTnhAVzOX7lbxuYxJR91JgA" alt="Sylvanie Tendron">
+                    <div class="bouton">
+                        <h5>Retourner aux expositions</h5>
+                    </div>
+                </div>
+            </div>
+        </section >
+        <section class="section section-3">
+            <div class="ip_titre">
+                <h2>Informations Pratiques</h2>
+            </div>
+            <div class="ip">
+                <div class="ip_partie_gauche">
+                    <div class="ip_texte">
+                        <h5>Informations Covid-19</h5>
+                        <p>Un pass sanitaire est nécessaire pour entrer dans le musée.</p>
+                        <br>
+                        <h5>Horaires</h5>
+                        <p>Mardi au dimanche de 11h à 18h</p>
+                        <br>
+                        <h5>Tarifs</h5>
+                        <p>Tarif plein : 7€ / Tarif réduit : 4€</p>
+                        <br>
+                        <h5>Contact</h5>
+                        <p>Tél: +33 (0)5 56 00 81 50
+                        <br/>
+                        Mail: capc@mairie-bordeaux.fr
+                        </p>
+                    </div>
+                    <div class="ip_bouton">
+                        <h5>Plus de détails</h5>
+                    </div>
+                </div>
+                <div class="ip_partie_droite">
+                    <div class="ip_plan_acces">
+                        <img src="https://blog.grainedephotographe.com/wp-content/uploads/2020/10/checkmydream-1-420x226.jpg" alt="Plan accès CAPC">
+                    </div>
+                    <div class="ip_acces">  
+                        <h5>Accès</h5>
+                        <br>
+                        <p>7 rue Ferrere, 33000 Bordeaux</p>
+                        <br>
+                        <p>Tram B arrêt CAPC Musée d’Art Contemporain</p>
+                        <p>Tram C arrêt Jardin Public</p>
+                        <p>Bus 4 Jardin Public</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="footer-wrapper">
+    
+                <div class="footer-logo"></div>
+                <div class="footer-sections">
+                    <ul class="footer-section">
+                        <li class="footer-section-title"><h4>Le musée</h4></li>
+                        <li class="footer-section-link"><a href="#">Pratique</a></li>
+                        <li class="footer-section-link"><a href="#">Actualités</a></li>
+                        <li class="footer-section-link"><a href="#">Éditions</a></li>
+                        <li class="footer-section-link"><a href="#">Presse</a></li>
+                        <li class="footer-section-link"><a href="#">Partenariat</a></li>
+                    </ul>
+                    <ul class="footer-section">
+                        <li class="footer-section-title"><h4>Informations</h4></li>
+                        <li class="footer-section-link"><a href="#">Mentions légales</a></li>
+                        <li class="footer-section-link"><a href="#">Plan du site</a></li>
+                        <li class="footer-section-link"><a href="#">Crédits</a></li>
+                    </ul>
+                    <ul class="footer-section">
+                        <li class="footer-section-title"><h4>Programme</h4></li>
+                        <li class="footer-section-link"><a href="#">Expositions</a></li>
+                        <li class="footer-section-link"><a href="#">Visites</a></li>
+                        <li class="footer-section-link"><a href="#">Rencontres</a></li>
+                        <li class="footer-section-link"><a href="#">Conférences</a></li>
+                        <li class="footer-section-link"><a href="#">Jeune public</a></li>
+                    </ul>
+    
+                    <ul class="footer-section">
+                        <li class="footer-section-title"><h4>Réseaux sociaux</h4></li>
+                        <li class="footer-section-rs">
+                            <a href="#">
+                                <svg width="40" height="36" viewBox="0 0 46 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.3 23.1499H31.28L32.2 16.2499H25.3V12.3399C25.3 10.2699 25.76 8.88989 28.75 8.88989H32.2V2.67989C31.51 2.67989 29.9 2.44989 27.37 2.44989C22.08 2.44989 18.4 5.66989 18.4 11.6499V16.2499H12.65V23.1499H18.4V41.5499H25.3V23.1499Z" fill="currentColor"/></svg>                                
+                            </a>
+                            <a href="#">
+                                <svg width="41" height="32" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.0213 9.87179C20.0213 4.41957 24.5144 0 30.0559 0C33.3089 0 35.9066 1.51332 37.6474 3.70945C39.5168 3.33329 41.2749 2.653 42.8655 1.72491C42.2384 3.65305 40.9113 5.27415 39.1811 6.30002C39.1827 6.30333 39.184 6.30667 39.1856 6.30999C40.8824 6.10742 42.4967 5.66369 44 5.00858L43.9965 5.01392C42.9149 6.6068 41.5554 8.01299 39.9924 9.15864C40.0765 9.71533 40.1192 10.2757 40.1192 10.8329C40.1192 22.4677 31.1063 36 14.5264 36C9.44863 36 4.71922 34.5368 0.738333 32.0251C-0.00758559 31.5545 -0.224296 30.5782 0.254294 29.8447C0.296561 29.7797 0.342873 29.7191 0.39265 29.6623C0.676616 29.2002 1.21759 28.9184 1.79855 28.9856C4.73597 29.3262 7.67262 28.9739 10.261 27.862C7.69374 26.7485 5.70081 24.5907 4.83668 21.9395C4.68119 21.4624 4.79275 20.9401 5.13024 20.5649C5.14196 20.5519 5.15386 20.5391 5.16596 20.5266C3.10962 18.7468 1.81245 16.1394 1.81245 13.2336V13.1268C1.81245 12.6235 2.08326 12.1578 2.52435 11.9027C2.66929 11.8188 2.82546 11.7618 2.98577 11.7317C2.28025 10.3934 1.88123 8.873 1.88123 7.26251C1.88123 5.78561 1.88983 3.92429 2.94725 2.24799C3.1843 1.87221 3.57071 1.64307 3.98414 1.58878C4.59225 1.40073 5.28224 1.58165 5.7097 2.09715C9.2121 6.32094 14.2678 9.23909 20.0223 10.0085L20.0213 9.87179ZM14.5264 32.8438C11.9995 32.8438 9.57299 32.43 7.30932 31.6687C10.0618 31.2 12.703 30.1335 14.9788 28.3796C15.46 28.0088 15.6516 27.38 15.4572 26.81C15.2629 26.2401 14.7247 25.8522 14.1134 25.8416C11.8577 25.8024 9.85962 24.7088 8.61056 23.0401C9.22147 22.9915 9.81841 22.8884 10.3966 22.7346C11.0436 22.5626 11.4852 21.9754 11.4631 21.3167C11.441 20.658 10.961 20.1008 10.3039 19.971C7.80504 19.4777 5.78919 17.6719 5.02812 15.3177C5.67276 15.4708 6.34182 15.5619 7.02798 15.584C7.67246 15.6047 8.25281 15.2028 8.45016 14.5991C8.64747 13.9953 8.41392 13.3361 7.87786 12.9837C6.0023 11.7506 4.76967 9.64565 4.76967 7.26251C4.76967 6.734 4.77724 6.2623 4.80943 5.83466C9.16649 10.1964 15.1282 13.006 21.7624 13.3345C22.2643 13.3593 22.749 13.1515 23.0721 12.7731C23.3952 12.3947 23.5194 11.8892 23.4077 11.4074C23.2923 10.9098 23.2307 10.3975 23.2307 9.87179C23.2307 6.16184 26.2878 3.15622 30.0559 3.15622C34.0172 3.15622 36.9098 6.7654 36.9098 10.8329C36.9098 21.1105 28.9653 32.8438 14.5264 32.8438Z" fill="currentColor"/></svg>                            
+                            </a>
+                        </li>
+                        <li class="footer-credits">&copy;2020-21 Tous droits réservés</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
